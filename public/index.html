@@ -40,11 +40,11 @@
 
     <section id="join-form" class="form-section" hidden aria-labelledby="form-title">
       <div class="form-heading"><h2 id="form-title">Join the ring</h2><button id="join-close" class="text-button" type="button">Close</button></div>
-      <p>Add your name, BASIS graduation year, and website. This prepares a file on GitHub for you to submit as a pull request. <a href="https://github.com/g4nesh/basis-webring/blob/main/CONTRIBUTING.md">Instructions</a>.</p>
+      <p>All graduation years are welcome. Add your name, BASIS graduation year, and website. This prepares a file on GitHub for you to submit as a pull request. <a href="https://github.com/g4nesh/basis-webring/blob/main/CONTRIBUTING.md">Instructions</a>.</p>
       <form id="member-form">
         <div class="form-fields">
           <label>Your name<input name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="First Last"></label>
-          <label>Graduation year<input name="year" required type="number" min="1998" max="2026" placeholder="2026"></label>
+          <label>Graduation year<input name="year" required type="number" min="1000" max="9999" step="1" placeholder="YYYY"></label>
           <label>Your website<input name="url" required type="url" maxlength="500" placeholder="https://your.site"></label>
         </div>
         <p id="form-error" role="alert"></p>

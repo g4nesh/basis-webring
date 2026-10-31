@@ -35,8 +35,13 @@ test('graph is a closed ring with no self-edges or duplicate two-person edges', 
   assert.deepEqual(ringEdges(members.slice(0, 1)), []);
 });
 test('validation rejects script URLs, credentials, missing names and invalid years', () => {
-  for (const overrides of [{ url: 'javascript:alert(1)' }, { url: 'http://alice.example' }, { url: 'https://user:pass@alice.example' }, { name: '<script>' }, { name: '' }, { year: '2026' }, { year: 1997 }, { year: new Date().getUTCFullYear() + 1 }, { campus: 'Peoria' }]) {
+  for (const overrides of [{ url: 'javascript:alert(1)' }, { url: 'http://alice.example' }, { url: 'https://user:pass@alice.example' }, { name: '<script>' }, { name: '' }, { year: '2026' }, { year: 999 }, { year: 10000 }, { year: 2026.5 }, { campus: 'Peoria' }]) {
     assert.throws(() => validateMembers([{ ...members[0], ...overrides }]));
+  }
+});
+test('graduation years have no class-year cutoff', () => {
+  for (const year of [1997, 2005, 2018, 2026, new Date().getUTCFullYear() + 1]) {
+    assert.doesNotThrow(() => validateMembers([{ ...members[0], year }]));
   }
 });
 test('duplicate sites and IDs are rejected', () => {

@@ -21,7 +21,7 @@ You can also fork the repo and create `members/first-last.json` by hand:
 }
 ```
 
-Use your completed BASIS graduation year, not a college graduation year. The year must be between 1998 and the current year. Use a lowercase, hyphenated filename. If your name is already taken, add a distinguishing suffix to the filename. Please use only these three fields. The automated checks reject duplicate sites and invalid records.
+Use your BASIS graduation year, not a college graduation year. Any four-digit graduation year is accepted; there is no class-year cutoff. Use a lowercase, hyphenated filename. If your name is already taken, add a distinguishing suffix to the filename. Please use only these three fields. The automated checks reject duplicate sites and invalid records.
 
 ## Add the ring to your website
 

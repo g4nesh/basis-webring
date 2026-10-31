@@ -22,7 +22,6 @@ function openForm() {
 $('#join-open').addEventListener('click', openForm);
 $('#join-close').addEventListener('click', () => { $('#join-form').hidden = true; $('#join-open').focus(); });
 if (location.hash === '#join-form') openForm();
-$('#member-form').elements.year.max = String(new Date().getUTCFullYear());
 $('#member-form').addEventListener('submit', event => {
   event.preventDefault();
   const data = new FormData(event.currentTarget);

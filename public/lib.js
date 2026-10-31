@@ -8,7 +8,7 @@ export function validateMembers(members) {
     if (ids.has(id)) throw new Error(`Duplicate member: ${id}`);
     ids.add(id);
     if (typeof name !== 'string' || name.trim() !== name || name.length < 2 || name.length > 80 || /[<>\x00-\x1f]/.test(name)) throw new Error(`${id}: enter a name between 2 and 80 characters.`);
-    if (!Number.isInteger(year) || year < 1998 || year > new Date().getUTCFullYear()) throw new Error(`${id}: enter your completed graduation year.`);
+    if (!Number.isInteger(year) || year < 1000 || year > 9999) throw new Error(`${id}: enter a four-digit graduation year.`);
     let parsed;
     try { parsed = new URL(url); } catch { throw new Error(`${id}: enter a valid website URL.`); }
     if (typeof url !== 'string' || parsed.protocol !== 'https:' || !parsed.hostname.includes('.') || parsed.username || parsed.password || url.length > 500) throw new Error(`${id}: use a public HTTPS website without embedded credentials.`);
