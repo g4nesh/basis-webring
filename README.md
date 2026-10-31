@@ -40,7 +40,7 @@ Restart `npm run dev` after source changes; the server builds on startup. `publi
 
 ## Ring behavior
 
-The ring follows stable alphabetical filename order. The graph's edges show next/previous website connections, not friendship claims. Filtering highlights matching members without changing the ring order. Member IDs come from filenames; keep filenames stable to preserve existing widgets.
+The ring follows stable alphabetical filename order. Filtering the directory does not change the ring order. Member IDs come from filenames; keep filenames stable to preserve existing widgets.
 
 `/?from=your-name&to=next` and `/?from=your-name&to=prev` navigate to neighboring members. `/?to=random` visits a random website. Navigation resolves only against reviewed member records; arbitrary redirect URLs are never accepted. Removed IDs produce a useful directory message.
 
@@ -52,4 +52,4 @@ Import this GitHub repository into Vercel. `vercel.json` configures `npm run bui
 
 Ganesh Talluri, Ishaan Ranjan, and Vignesh Nagarajan were requested by the project owner as the founding members, class of 2026. Their personal website URLs were verified on October 31, 2026. No campus data is stored. See [CONTRIBUTING.md](CONTRIBUTING.md) to update or remove a listing.
 
-Inspired by the [Waterloo CS Webring](https://cs.uwatering.com/), with an original design and implementation. This is an independent alumni project, not affiliated with or endorsed by BASIS. Code is [MIT licensed](LICENSE); member names and linked sites remain their owners' content.
+This is an independent alumni project, not affiliated with or endorsed by BASIS. Code is [MIT licensed](LICENSE); member names and linked sites remain their owners' content.

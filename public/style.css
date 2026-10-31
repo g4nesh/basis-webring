@@ -36,15 +36,8 @@ th:nth-child(3) { width: 16%; }
 .member-year { color: #666; font-size: 13px; }
 .member-site { overflow-wrap: anywhere; }
 .member-site span { display: none; }
-.muted, figcaption, footer { color: #777; font-size: 12px; }
+.muted, footer { color: #777; font-size: 12px; }
 #results { margin-top: 4px; }
-figure { margin: 18px 0 24px; }
-#graph { display: block; width: 320px; max-width: 100%; height: auto; margin: 0 auto; }
-#graph .edge { stroke: #aaa; stroke-width: 1; fill: none; }
-#graph .node-dot { fill: #174eae; stroke: white; stroke-width: 3; }
-#graph a:hover .node-dot, #graph a:focus .node-dot { fill: #111; }
-#graph .node-label { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #333; }
-figcaption { text-align: center; }
 details { font-size: 12px; margin-top: 16px; }
 summary { cursor: pointer; width: fit-content; }
 pre { font-size: 11px; overflow-x: auto; padding: 12px; background: #f5f5f5; }
