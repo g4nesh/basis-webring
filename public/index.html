@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="A little corner of the internet for BASIS graduates. Explore alumni websites, follow the ring, and add your own.">
+  <meta property="og:title" content="BASIS web ring">
+  <meta property="og:description" content="Different paths. A shared starting point. A web ring for graduates of every BASIS school.">
+  <meta property="og:type" content="website">
+  <title>BASIS web ring — a shared starting point</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#directory">Skip to members</a>
+  <div class="page">
+    <header>
+      <a class="brand" href="/" aria-label="BASIS web ring home"><img src="/favicon.svg" width="35" height="35" alt=""><span>basis<span class="brand-light"> / web ring</span></span></a>
+      <nav aria-label="Main navigation"><a href="https://github.com/g4nesh/basis-webring">GitHub <span aria-hidden="true">↗</span></a><a href="#join">Join the ring <span aria-hidden="true">↗</span></a></nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="title">
+        <div class="intro-copy"><p class="eyebrow"><span class="status-dot"></span> MANY SCHOOLS. ONE RING.</p>
+          <h1 id="title">Different paths.<br>A shared <em>starting point.</em></h1>
+          <p class="description">A little corner of the internet for BASIS graduates.<br class="desktop-break"> Personal sites, side projects, and whatever comes next.</p>
+          <div class="intro-links"><a href="#directory">Meet the people <span aria-hidden="true">↓</span></a><button id="random" type="button">Take a random turn <span aria-hidden="true">↗</span></button></div>
+        </div>
+        <div class="graph-panel"><div class="graph-meta"><span>THE RING</span><span id="graph-count"><!-- MEMBER_COUNT --> NODES</span></div>
+          <svg id="graph" viewBox="0 0 430 280" aria-labelledby="graph-title graph-description"><title id="graph-title">BASIS alumni web ring</title><desc id="graph-description">Each dot is a member. Lines show the order of websites in the ring. The same members are listed below.</desc></svg>
+          <p class="graph-caption"><span class="legend-dot"></span> a person <span class="legend-line"></span> the next site <span class="graph-hint">click to explore ↗</span></p>
+        </div>
+      </section>
+
+      <section id="directory" aria-labelledby="members-title">
+        <div class="section-heading"><h2 id="members-title">The people <span id="member-count" class="count"><!-- MEMBER_COUNT --></span></h2><p>All BASIS. All paths welcome.</p></div>
+        <div class="filters"><div class="search-wrap"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.4"/></svg><input id="search" type="search" aria-label="Search members" placeholder="Find a name, year, or website…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div><select id="year" aria-label="Filter by graduation year"><option value="">All years</option></select></div>
+        <div class="table-wrap"><table><thead><tr><th scope="col" class="row-number">#</th><th scope="col">NAME</th><th scope="col">CLASS OF</th><th scope="col">ON THE INTERNET</th></tr></thead><tbody id="members"><!-- MEMBER_ROWS --></tbody></table></div>
+        <p id="empty" hidden>No one here just yet. <button id="clear-search" class="text-button" type="button">Clear filters</button></p>
+        <div class="table-footer"><p id="results" role="status" aria-live="polite">A growing circle of <!-- MEMBER_COUNT --> people.</p><a href="#join">There’s room for you, too <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section id="join" class="join" aria-labelledby="join-title">
+        <div><p class="eyebrow">KEEP THE CIRCLE GROWING</p><h2 id="join-title">Your site belongs here.</h2><p>Graduated from a BASIS school? Have a website?<br>That’s all you need. Add yourself with a pull request.</p><a class="button-primary" href="#join-form" id="join-open">Join the ring <span aria-hidden="true">↗</span></a><a class="join-guide" href="https://github.com/g4nesh/basis-webring/blob/main/CONTRIBUTING.md">Read the guide</a></div>
+        <div class="join-note"><span class="note-star" aria-hidden="true">✳</span><p>The internet is better<br>when we link to each other.</p><span>Small websites. Real people.</span></div>
+      </section>
+
+      <section id="join-form" class="form-section" hidden aria-labelledby="form-title">
+        <div class="section-heading"><h2 id="form-title">Make yourself at home.</h2><button id="join-close" class="text-button" type="button">Close ×</button></div>
+        <p>Fill this in, then open your entry on GitHub. GitHub will guide you through proposing a file and opening a pull request. Once it’s merged, you’re in.</p>
+        <form id="member-form"><div class="form-fields"><label>Your name<input name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="First Last"></label><label>Graduation year<input name="year" required type="number" min="1998" max="2026" placeholder="2026"></label><label>Your website<input name="url" required type="url" maxlength="500" placeholder="https://your.site"></label></div><p id="form-error" role="alert"></p><button class="button-primary" type="submit">Continue on GitHub <span aria-hidden="true">↗</span></button><span class="form-note">A free GitHub account is required.</span></form>
+      </section>
+
+      <details id="widget"><summary>Already in? Put the ring on your site. <span aria-hidden="true">+</span></summary><div class="widget-body"><p>Choose your name and paste this HTML anywhere on your website.</p><label for="widget-member">Your name</label><select id="widget-member"></select><pre><code id="widget-code"></code></pre><button type="button" id="copy-widget" class="text-button">Copy HTML</button><p id="copy-status" role="status"></p></div></details>
+      <p id="app-error" role="alert" hidden></p>
+      <noscript><p>The directory works without JavaScript. To join, follow the GitHub guide above. Enable JavaScript for the graph, search, and ring navigation.</p></noscript>
+    </main>
+    <footer><span>An independent, alumni-built project.<br>Not affiliated with or endorsed by BASIS.</span><div><a href="https://cs.uwatering.com/">Inspired by Waterloo’s web ring ↗</a><a href="https://github.com/g4nesh/basis-webring">Made to be open source ↗</a></div><span class="footer-mark" aria-hidden="true">↖ back to each other.</span></footer>
+  </div>
+</body>
+</html>

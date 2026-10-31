@@ -1,0 +1,12 @@
+import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { readMembers } from './members.mjs';
+const members = await readMembers();
+await mkdir('dist', { recursive: true });
+await cp('public', 'dist', { recursive: true });
+await writeFile('dist/members.json', JSON.stringify(members, null, 2));
+const escape = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
+let html = await readFile('public/index.html', 'utf8');
+html = html.replace('<!-- MEMBER_ROWS -->', members.map((member, index) => `<tr data-member="${escape(member.id)}"><td class="row-number">${String(index + 1).padStart(2, '0')}</td><td><a class="member-name" href="${escape(member.url)}">${escape(member.name)}</a></td><td class="member-year">${member.year}</td><td class="member-site"><a href="${escape(member.url)}">${escape(new URL(member.url).hostname.replace(/^www\./, ''))}<span aria-hidden="true">↗</span></a></td></tr>`).join('\n'));
+html = html.replaceAll('<!-- MEMBER_COUNT -->', String(members.length).padStart(2, '0'));
+await writeFile('dist/index.html', html);
+console.log(`Built static site with ${members.length} members.`);
