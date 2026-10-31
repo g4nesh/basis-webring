@@ -1,5 +1,7 @@
 # BASIS web ring
 
+**Live site: [basis-webring.vercel.app](https://basis-webring.vercel.app/)**
+
 A small, independent web ring for graduates of **any BASIS school**. One community, no campus divisions. Built with plain HTML, CSS, JavaScript, and Node's standard library. No runtime dependencies, database, accounts, or tracking.
 
 ## Join
