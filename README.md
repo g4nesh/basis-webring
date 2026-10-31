@@ -21,7 +21,7 @@ Use **Join the ring** on the website to prepare your entry, or add a file direct
 
 3. Open a pull request. Checks validate the entry; a maintainer reviews it.
 4. After the PR is merged, Vercel automatically publishes the updated ring.
-5. Choose your name under **Already in? Put the ring on your site** and copy the previous/next links to your site.
+5. Choose your name under **Add the ring to your site** and copy the previous/next links to your site.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete browser-only walkthrough.
 

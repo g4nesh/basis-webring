@@ -25,7 +25,7 @@ Use your completed BASIS graduation year, not a college graduation year. The yea
 
 ## Add the ring to your website
 
-After your entry is live, expand **Already in? Put the ring on your site**, choose your name, and copy the HTML. You can style it however you like. The arrows take visitors to the previous and next websites in the ring. The middle link brings them back to the directory.
+After your entry is live, expand **Add the ring to your site**, choose your name, and copy the HTML. You can style it however you like. The arrows take visitors to the previous and next websites in the ring. The middle link brings them back to the directory.
 
 ## Updates and removals
 
